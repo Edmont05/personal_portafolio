@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio QA - ME</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Logo_ME.png">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for generic icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-environment">
+        <div class="light-streak streak-1"></div>
+        <div class="light-streak streak-2"></div>
+        <div class="light-streak streak-3"></div>
+        <div class="dust-motes" id="particles-js"></div>
+    </div>
+
+    <main class="zero-gravity-container">
+        <!-- Top Section -->
+        <header class="top-section">
+            <div class="logo-container floating" style="animation-delay: 0s;">
+                <img src="Logo_ME.png" alt="ME Logo" class="logo-img" style="max-height: 100px; filter: drop-shadow(0 10px 20px rgba(14, 165, 233, 0.5));">
+            </div>
+            <nav class="nav-bar glass-plate floating" style="animation-delay: -1s;">
+                <ul>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#sobre-mi">SOBRE MÍ</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#habilidades">HABILIDADES</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#proyectos">PROYECTOS</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#certificaciones">CERTIFICACIONES</a></li>
+                    <li class="separator">|</li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li class="separator">|</li>
+                    <li>
+                        <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main-layout">
+            <!-- Left Panel: Sobre Mi -->
+            <section class="left-plate glass-plate floating" style="animation-delay: -2s;">
+                <h2>EDDY MONTAÑO</h2>
+                <div class="about-content">
+                    <div class="headshot-placeholder crystal-block" style="overflow: hidden; padding: 0;">
+                        <img src="profesionalME.png" alt="Foto de Perfil Profesional" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                    <p class="etched-text">Being a QA is more than just a profession for me; it comes from my commitment to delivering quality and always putting myself in the user’s shoes. I enjoy discovering the details that make a difference, contributing valuable solutions to the team, and ensuring that every delivery is truly reliable and meaningful for those who use it.</p>
+                </div>
+                <div class="test-cycle-diagram">
+                    <div class="loop loop-1"></div>
+                    <div class="loop loop-2"></div>
+                    <div class="loop loop-3"></div>
+                    <div class="center-text">TEST CYCLE</div>
+                </div>
+            </section>
+
+            <!-- Proyectos
+                <section class="projects-wrapper glass-plate floating" style="animation-delay: -1.5s;">
+                    <h2>PROYECTOS</h2>
+                    <div class="project-card crystal-block floating" style="animation-duration: 6s;">
+                        <h3>PROYECTO 1: Suite de Pruebas de Regresión para E-commerce</h3>
+                        <div class="screenshot-mockup">
+                            <div class="browser-header">
+                                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            </div>
+                            <div class="browser-body">
+                                <i class="fa-solid fa-chart-line"></i> QA Dashboard Layout
+                                <div class="mock-bars">
+                                    <div class="mock-bar" style="width: 80%"></div>
+                                    <div class="mock-bar" style="width: 60%"></div>
+                                    <div class="mock-bar" style="width: 90%; background: var(--accent-green);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="etched-text small">Summary: Suite de Pruebas de regresión para E-commere: es aorrova de moncado automatov tesiistisolltino automine pars buebas ara le esperción Imstistilio par la automotvo evontimiento de prueba.</p>
+                        <button class="demo-btn glow-btn">DEMO EN VIVO</button>
+                    </div>
+                    
+                    <div class="project-card crystal-block floating" style="animation-duration: 7s; animation-delay: -2s;">
+                        <h3>PROYECTO 2: Pruebas de Rendimiento de Aplicación Móvil</h3>
+                        <div class="chart-mockups">
+                            <div class="chart bar-chart">
+                                <div class="bar h-40"></div><div class="bar h-80"></div><div class="bar h-60"></div>
+                            </div>
+                            <div class="chart line-chart">
+                                <div class="sine-wave"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card crystal-block floating" style="animation-duration: 7s; animation-delay: -2s;">
+                        <h3>PROYECTO 2: Pruebas de Rendimiento de Aplicación Móvil</h3>
+                        <div class="chart-mockups">
+                            <div class="chart bar-chart">
+                                <div class="bar h-40"></div><div class="bar h-80"></div><div class="bar h-60"></div>
+                            </div>
+                            <div class="chart line-chart">
+                                <div class="sine-wave"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>-->
+            
+            <!-- Right Panel: Proyectos and Certificaciones Container -->
+            <div class="right-column">
+            <!--Habilidades-->
+                <section class="center-plate glass-plate floating" style="animation-delay: -3.5s;">
+                <h2>HABILIDADES</h2>
+                <div class="hex-grid">
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 4s; animation-delay: 0s;">
+                        <div class="hex-tile"><i class="fa-solid fa-vial-circle-check"></i><span>Selenium</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 5s; animation-delay: -1s;">
+                        <div class="hex-tile"><i class="fa-brands fa-jira"></i><span>JIRA</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 4.5s; animation-delay: -2s;">
+                        <div class="hex-tile"><i class="fa-solid fa-rocket"></i><span>Postman</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 5.5s; animation-delay: -0.5s;">
+                        <div class="hex-tile"><i class="fa-solid fa-leaf"></i><span>Cypress</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 4s; animation-delay: -3s;">
+                        <div class="hex-tile"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 5s; animation-delay: -1.5s;">
+                        <div class="hex-tile"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 4.8s; animation-delay: -2.5s;">
+                        <div class="hex-tile"><i class="fa-solid fa-rotate"></i><span>Agile</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 5.2s; animation-delay: -0.2s;">
+                        <div class="hex-tile"><i class="fa-solid fa-code-branch"></i><span>CI/CD</span></div>
+                    </div>
+                </div>
+                </section>
+
+            <!-- Certificaciones -->
+                <section class="bottom-right-plate glass-plate floating" style="animation-delay: -4s;">
+                    <h2>CERTIFICACIONES</h2>
+                    <div class="cert-badges">
+                        <div class="cert-badge crystal-badge floating" style="animation-duration: 4s;">
+                            <i class="fa-solid fa-certificate"></i> ISTQB Foundation
+                        </div>
+                        <div class="cert-badge crystal-badge floating" style="animation-duration: 5s; animation-delay:-1s;">
+                            <i class="fa-solid fa-certificate"></i> ISTQB Advanced Test Automation
+                        </div>
+                        <div class="cert-badge crystal-badge floating" style="animation-duration: 4.5s; animation-delay:-2s;">
+                            <i class="fa-solid fa-certificate"></i> Agile Tester
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="watermark">IVE</div>
+    </main>
+
+    <!-- Particles.js for dust motes effect -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
