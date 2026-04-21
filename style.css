@@ -666,3 +666,152 @@ h2 {
     .logo-3d { font-size: 3.5rem; }
     .hex-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   TIMELINE DE EXPERIENCIA LABORAL
+   ========================================= */
+.experience-wrapper {
+    /* Si usas CSS Grid en main-layout, esto hace que ocupe todo el ancho inferior */
+    grid-column: 1 / -1; 
+    width: 100%;
+}
+
+.glass-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 3rem auto 1rem auto;
+    padding: 20px 0;
+}
+
+/* La línea central brillante */
+.glass-timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, rgba(14, 165, 233, 0.8), rgba(16, 185, 129, 0.8));
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.6);
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Acomodar izquierda y derecha */
+.timeline-item.left { left: 0; }
+.timeline-item.right { left: 50%; }
+
+/* El hexágono brillante en la línea central */
+.timeline-hexagon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    top: 30px;
+    background-color: rgba(14, 165, 233, 0.2);
+    border: 2px solid #0ea5e9;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 1;
+    box-shadow: 0 0 10px #0ea5e9, inset 0 0 5px #0ea5e9;
+}
+
+.timeline-item.right .timeline-hexagon {
+    left: -10px;
+}
+
+/* Contenido de la tarjeta de experiencia */
+.timeline-content {
+    padding: 25px;
+    position: relative;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(14, 165, 233, 0.3);
+    border-color: rgba(14, 165, 233, 0.5);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+.timeline-date {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    color: #0ea5e9;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.timeline-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.timeline-list li {
+    margin-bottom: 8px;
+    list-style-type: square;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Píldoras de tecnología */
+.tech-pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #e2e8f0;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s ease;
+}
+
+.tech-pill:hover {
+    background: rgba(14, 165, 233, 0.2);
+    border-color: rgba(14, 165, 233, 0.4);
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+    .glass-timeline::after { left: 31px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+    .timeline-item.right { left: 0%; }
+    .timeline-item.left .timeline-hexagon, 
+    .timeline-item.right .timeline-hexagon { left: 21px; }
+}
