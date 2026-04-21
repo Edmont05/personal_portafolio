@@ -28,21 +28,27 @@
             </div>
             <nav class="nav-bar glass-plate floating" style="animation-delay: -1s;">
                 <ul>
-                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#inicio" data-i18n="nav_inicio">INICIO</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#sobre-mi">SOBRE MÍ</a></li>
+                    <li><a href="#sobre-mi" data-i18n="nav_sobre_mi">SOBRE MÍ</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#habilidades">HABILIDADES</a></li>
+                    <li><a href="#habilidades" data-i18n="nav_habilidades">HABILIDADES</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#proyectos">PROYECTOS</a></li>
+                    <li><a href="#proyectos" data-i18n="nav_proyectos">PROYECTOS</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#certificaciones">CERTIFICACIONES</a></li>
+                    <li><a href="#certificaciones" data-i18n="nav_certificaciones">CERTIFICACIONES</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li><a href="#contacto" data-i18n="nav_contacto">CONTACTO</a></li>
                     <li class="separator">|</li>
                     <li>
                         <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
                             <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+                    <li class="separator">|</li>
+                    <li>
+                        <button id="lang-toggle" class="theme-btn" aria-label="Cambiar idioma" title="Cambiar a English" style="font-weight: 800; font-family: 'Inter', sans-serif; font-size: 1rem;">
+                            ES
                         </button>
                     </li>
                 </ul>
@@ -50,27 +56,27 @@
         </header>
 
         <div class="main-layout">
-            <!-- Left Panel: Sobre Mi -->
+            <!-- Left Panel: Sobre Mi 
             <section class="left-plate glass-plate floating" style="animation-delay: -2s;">
-                <h2>EDDY MONTAÑO</h2>
+                <h2 data-i18n="title_sobre_mi">EDDY MONTAÑO</h2>
                 <div class="about-content">
                     <div class="headshot-placeholder crystal-block" style="overflow: hidden; padding: 0;">
                         <img src="profesionalME.png" alt="Foto de Perfil Profesional" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                     </div>
-                    <p class="etched-text">Being a QA is more than just a profession for me; it comes from my commitment to delivering quality and always putting myself in the user’s shoes. I enjoy discovering the details that make a difference, contributing valuable solutions to the team, and ensuring that every delivery is truly reliable and meaningful for those who use it.</p>
+                    <p class="etched-text" data-i18n="about_text">Ser QA es más que una profesión para mí; surge de mi compromiso por entregar calidad y ponerme siempre en el lugar del usuario. Disfruto descubriendo los detalles que marcan la diferencia, aportando soluciones valiosas al equipo y asegurando que cada entrega sea verdaderamente confiable y significativa para quienes la usan.</p>
                 </div>
                 <div class="test-cycle-diagram">
                     <div class="loop loop-1"></div>
                     <div class="loop loop-2"></div>
                     <div class="loop loop-3"></div>
-                    <div class="center-text">TEST CYCLE</div>
+                    <div class="center-text" data-i18n="test_cycle">CICLO DE PRUEBAS</div>
                 </div>
-            </section>
+            </section>-->
 
-            <!-- Proyectos
+            <!-- Proyectos-->
                 <section class="projects-wrapper glass-plate floating" style="animation-delay: -1.5s;">
-                    <h2>PROYECTOS</h2>
-                    <div class="project-card crystal-block floating" style="animation-duration: 6s;">
+                    <h2 data-i18n="title_proyectos">PROYECTOS</h2>
+                    <!-- <div class="project-card crystal-block floating" style="animation-duration: 6s;">
                         <h3>PROYECTO 1: Suite de Pruebas de Regresión para E-commerce</h3>
                         <div class="screenshot-mockup">
                             <div class="browser-header">
@@ -111,55 +117,73 @@
                                 <div class="sine-wave"></div>
                             </div>
                         </div>
-                    </div>
-                </section>-->
+                    </div> -->
+                </section>
             
             <!-- Right Panel: Proyectos and Certificaciones Container -->
             <div class="right-column">
             <!--Habilidades-->
                 <section class="center-plate glass-plate floating" style="animation-delay: -3.5s;">
-                <h2>HABILIDADES</h2>
+                <h2 data-i18n="title_habilidades">HABILIDADES</h2>
                 <div class="hex-grid">
-                    <div class="hex-tile-wrapper floating" style="animation-duration: 4s; animation-delay: 0s;">
-                        <div class="hex-tile"><i class="fa-solid fa-vial-circle-check"></i><span>Selenium</span></div>
-                    </div>
-                    <div class="hex-tile-wrapper floating" style="animation-duration: 5s; animation-delay: -1s;">
-                        <div class="hex-tile"><i class="fa-brands fa-jira"></i><span>JIRA</span></div>
-                    </div>
                     <div class="hex-tile-wrapper floating" style="animation-duration: 4.5s; animation-delay: -2s;">
                         <div class="hex-tile"><i class="fa-solid fa-rocket"></i><span>Postman</span></div>
                     </div>
-                    <div class="hex-tile-wrapper floating" style="animation-duration: 5.5s; animation-delay: -0.5s;">
-                        <div class="hex-tile"><i class="fa-solid fa-leaf"></i><span>Cypress</span></div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 4s; animation-delay: 0s;">
+                        <div class="hex-tile"><i class="fa-solid fa-vial-circle-check"></i><span>Selenium</span></div>
                     </div>
-                    <div class="hex-tile-wrapper floating" style="animation-duration: 4s; animation-delay: -3s;">
-                        <div class="hex-tile"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 4.5s; animation-delay: -2s;">
+                        <div class="hex-tile"><i class="fa-brands fa-java"></i><span>Testing Java</span></div>
                     </div>
                     <div class="hex-tile-wrapper floating" style="animation-duration: 5s; animation-delay: -1.5s;">
-                        <div class="hex-tile"><i class="fa-brands fa-python"></i><span>Python</span></div>
-                    </div>
-                    <div class="hex-tile-wrapper floating" style="animation-duration: 4.8s; animation-delay: -2.5s;">
-                        <div class="hex-tile"><i class="fa-solid fa-rotate"></i><span>Agile</span></div>
+                        <div class="hex-tile"><i class="fa-brands fa-python"></i><span>Pytest</span></div>
                     </div>
                     <div class="hex-tile-wrapper floating" style="animation-duration: 5.2s; animation-delay: -0.2s;">
                         <div class="hex-tile"><i class="fa-solid fa-code-branch"></i><span>CI/CD</span></div>
                     </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 4s; animation-delay: -3s;">
+                        <div class="hex-tile"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 4.8s; animation-delay: -2.5s;">
+                        <div class="hex-tile"><i class="fa-solid fa-rotate"></i><span>Agile</span></div>
+                    </div>
+                    <div class="hex-tile-wrapper floating" style="animation-duration: 5s; animation-delay: -1s;">
+                        <div class="hex-tile"><i class="fa-brands fa-jira"></i><span>JIRA</span></div>
+                    </div>
+                    <!-- <div class="hex-tile-wrapper floating" style="animation-duration: 5.5s; animation-delay: -0.5s;">
+                        <div class="hex-tile"><i class="fa-solid fa-vial"></i><span>Unit Testing</span></div>
+                    </div> -->
+                    
+                    
+
+                    
                 </div>
                 </section>
 
             <!-- Certificaciones -->
                 <section class="bottom-right-plate glass-plate floating" style="animation-delay: -4s;">
-                    <h2>CERTIFICACIONES</h2>
+                    <h2 data-i18n="title_certificaciones">CERTIFICACIONES</h2>
                     <div class="cert-badges">
-                        <div class="cert-badge crystal-badge floating" style="animation-duration: 4s;">
-                            <i class="fa-solid fa-certificate"></i> ISTQB Foundation
-                        </div>
-                        <div class="cert-badge crystal-badge floating" style="animation-duration: 5s; animation-delay:-1s;">
-                            <i class="fa-solid fa-certificate"></i> ISTQB Advanced Test Automation
-                        </div>
-                        <div class="cert-badge crystal-badge floating" style="animation-duration: 4.5s; animation-delay:-2s;">
-                            <i class="fa-solid fa-certificate"></i> Agile Tester
-                        </div>
+                        <a href="https://badges.parchment.com/public/assertions/PFD6eXh9ToO9-NDzzySivg" target="_blank" rel="noopener noreferrer" class="cert-badge crystal-badge floating" style="animation-duration: 4.5s; animation-delay:-2s; text-decoration: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                            <img src="Certification_POSTMAN.png" alt="Postman API Fundamentals Student Expert" title="Ver Certificado Postman API Fundamentals" style="height: 110px; width: auto; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(255, 108, 55, 0.5)); transition: transform 0.3s;">
+                        </a>
+                        <a href="https://app.smalltalk2.me/cert/0a3b5bf0" target="_blank" rel="noopener noreferrer" class="cert-badge crystal-badge floating" style="animation-duration: 4.5s; animation-delay:-2s; text-decoration: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                            <img src="Certifications_smalltalk2.png" alt="SmallTalk English Speaking Level Test" title="Ver Certificado SmallTalk English Speaking Level Test" style="height: 110px; width: auto; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(255, 255, 255, 0.5)); transition: transform 0.3s;">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1QEpzhUOokKZNSKFjATKyeii32eeqAIaa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-badge crystal-badge floating" style="animation-duration: 4.5s; animation-delay:-2s; text-decoration: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                            <img src="Certifications_UAGRM.png" alt="Test unitarios en SPRING BOOT" title="Ver Certificado Test unitarios en SPRING BOOT" style="height: 110px; width: auto; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(73, 45, 255, 0.5)); transition: transform 0.3s;">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1N81to_k7D7x-cynxRlWRWOSGpA-vzXYh/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cert-badge crystal-badge floating" style="animation-duration: 4.5s; animation-delay:-2s; text-decoration: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                            <img src="Certifications_UAGRM.png" alt="Test unitarios en ANGULAR" title="Ver Certificado Test unitarios en ANGULAR" style="height: 110px; width: auto; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(73, 45, 255, 0.5)); transition: transform 0.3s;">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1uMjq0McC1vXMu9kVWtES-O9nEV5Y6HsF/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cert-badge crystal-badge floating" style="animation-duration: 4.5s; animation-delay:-2s; text-decoration: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                            <img src="Certifications_UAGRM.png" alt="Test unitarios en FLUTTER" title="Ver Certificado Test unitarios en FLUTTER" style="height: 110px; width: auto; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(73, 45, 255, 0.5)); transition: transform 0.3s;">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1GCsu7KFAS9iC-iOXlpCdl8bFjDE_8-ma/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cert-badge crystal-badge floating" style="animation-duration: 4.5s; animation-delay:-2s; text-decoration: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                            <img src="Certifications_Excel.png" alt="Microsoft Exel Basico + Intermedio" title="Ver Certificado Microsoft Exel Basico + Intermedio" style="height: 110px; width: auto; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(96, 255, 112, 0.803)); transition: transform 0.3s;">
+                        </a>
+                        
+                        
                     </div>
                 </section>
             </div>

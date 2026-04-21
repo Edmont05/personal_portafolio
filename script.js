@@ -55,6 +55,67 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', theme);
     });
 
+    // Language Toggle Logic
+    const translations = {
+        es: {
+            nav_inicio: "INICIO",
+            nav_sobre_mi: "SOBRE MÍ",
+            nav_habilidades: "HABILIDADES",
+            nav_proyectos: "PROYECTOS",
+            nav_certificaciones: "CERTIFICACIONES",
+            nav_contacto: "CONTACTO",
+            title_sobre_mi: "EDDY MONTAÑO",
+            about_text: "Ser QA es más que una profesión para mí; surge de mi compromiso por entregar calidad y ponerme siempre en el lugar del usuario. Disfruto descubriendo los detalles que marcan la diferencia, aportando soluciones valiosas al equipo y asegurando que cada entrega sea verdaderamente confiable y significativa para quienes la usan.",
+            test_cycle: "CICLO DE PRUEBAS",
+            title_proyectos: "PROYECTOS",
+            title_habilidades: "HABILIDADES",
+            title_certificaciones: "CERTIFICACIONES"
+        },
+        en: {
+            nav_inicio: "HOME",
+            nav_sobre_mi: "ABOUT ME",
+            nav_habilidades: "SKILLS",
+            nav_proyectos: "PROJECTS",
+            nav_certificaciones: "CERTIFICATIONS",
+            nav_contacto: "CONTACT",
+            title_sobre_mi: "EDDY MONTAÑO",
+            about_text: "Being a QA is more than just a profession for me; it comes from my commitment to delivering quality and always putting myself in the user’s shoes. I enjoy discovering the details that make a difference, contributing valuable solutions to the team, and ensuring that every delivery is truly reliable and meaningful for those who use it.",
+            test_cycle: "TEST CYCLE",
+            title_proyectos: "PROJECTS",
+            title_habilidades: "SKILLS",
+            title_certificaciones: "CERTIFICATIONS"
+        }
+    };
+
+    const langBtn = document.getElementById('lang-toggle');
+    let currentLang = localStorage.getItem('language') || 'es';
+
+    const applyLanguage = (lang) => {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+        document.documentElement.lang = lang;
+        langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
+        langBtn.title = lang === 'es' ? 'Switch to English' : 'Cambiar a Español';
+    };
+
+    // Apply saved language on load
+    if (currentLang !== 'es') {
+        applyLanguage(currentLang);
+    } else {
+        langBtn.textContent = 'EN';
+        langBtn.title = 'Switch to English';
+    }
+
+    langBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        applyLanguage(currentLang);
+        localStorage.setItem('language', currentLang);
+    });
+
     // Initialize particles.js for dust motes
     if (window.particlesJS) {
         particlesJS("particles-js", {
