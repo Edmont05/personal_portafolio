@@ -69,7 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
             test_cycle: "CICLO DE PRUEBAS",
             title_proyectos: "PROYECTOS",
             title_habilidades: "HABILIDADES",
-            title_certificaciones: "CERTIFICACIONES"
+            title_certificaciones: "CERTIFICACIONES",
+            title_experiencia: "EXPERIENCIA LABORAL",
+            exp1_title: "Tester y Control de Calidad de Software",
+            exp1_date: "Septiembre 2025 - Presente",
+            exp1_li1: "Ejecución de pruebas manuales (End-to-End) en plataformas web, desktop y mobile.",
+            exp1_li2: "Elaboración y mantenimiento de casos de prueba y documentación técnica.",
+            exp1_li3: "Identificación, reporte y seguimiento de bugs hasta su resolución.",
+            exp1_li4: "Integración en flujos de trabajo ágiles y participación en dailies y retrospectives.",
+            exp2_title: "QA Tester",
+            exp2_date: "Enero 2024 - Junio 2025",
+            exp2_li1: "Diseñar, planificar y ejecutar pruebas manuales en aplicaciones móviles y de escritorio.",
+            exp2_li2: "Automatizar pruebas para aplicaciones web en frontend y backend.",
+            exp2_li3: "Realizar pruebas de regresión y smoke testing, ampliando la cobertura de pruebas para asegurar la estabilidad en nuevas versiones.",
+            exp2_li4: "Documentar todos los casos de prueba, reportar y dar seguimiento a bugs.",
+            exp2_li5: "Participar activamente en equipos ágiles bajo metodología Scrum.",
+            exp3_title: "Pasante QA",
+            exp3_date: "Septiembre 2023 - Diciembre 2023",
+            exp3_li1: "Ejecutar pruebas manuales en el sistema de licencias desarrollado internamente.",
+            exp3_li2: "Validar las funcionalidades frente a requerimientos y criterios de aceptación.",
+            exp3_li3: "Documentar resultados y reportar bugs.",
+            exp3_li4: "Colaborar junto al equipo de desarrollo en la definición de procesos de pruebas y validación de nuevas funcionalidades."
         },
         en: {
             nav_inicio: "HOME",
@@ -83,7 +103,27 @@ document.addEventListener('DOMContentLoaded', () => {
             test_cycle: "TEST CYCLE",
             title_proyectos: "PROJECTS",
             title_habilidades: "SKILLS",
-            title_certificaciones: "CERTIFICATIONS"
+            title_certificaciones: "CERTIFICATIONS",
+            title_experiencia: "WORK EXPERIENCE",
+            exp1_title: "Software QA Tester",
+            exp1_date: "September 2025 - Present",
+            exp1_li1: "Execution of manual tests (End-to-End) on web, desktop and mobile platforms.",
+            exp1_li2: "Creation and maintenance of test cases and technical documentation.",
+            exp1_li3: "Bug identification, reporting and tracking until resolution.",
+            exp1_li4: "Integration into agile workflows and participation in dailies and retrospectives.",
+            exp2_title: "QA Tester",
+            exp2_date: "January 2024 - June 2025",
+            exp2_li1: "Design, plan and execute manual tests on mobile and desktop applications.",
+            exp2_li2: "Automate tests for frontend and backend web applications.",
+            exp2_li3: "Perform regression and smoke testing, expanding test coverage to ensure stability across new versions.",
+            exp2_li4: "Document test cases, report and track bugs.",
+            exp2_li5: "Actively participate in agile teams under Scrum methodology.",
+            exp3_title: "QA Intern",
+            exp3_date: "September 2023 - December 2023",
+            exp3_li1: "Execute manual tests on internally developed licensing systems.",
+            exp3_li2: "Validate functionalities against requirements and acceptance criteria.",
+            exp3_li3: "Document results and report bugs.",
+            exp3_li4: "Collaborate with the development team to define testing processes and validate new features."
         }
     };
 
@@ -205,9 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Generate binary background for Habilidades (center-plate)
-    const centerPlate = document.querySelector('.center-plate');
-    if (centerPlate) {
+    // Generate binary background for Habilidades
+    const habilidadesBox = document.getElementById('habilidades');
+    if (habilidadesBox) {
         const binDiv = document.createElement('div');
         binDiv.className = 'binary-bg';
         let binStr = '';
@@ -216,6 +256,47 @@ document.addEventListener('DOMContentLoaded', () => {
             binStr += Math.random() > 0.5 ? '1' : '0';
         }
         binDiv.textContent = binStr;
-        centerPlate.insertBefore(binDiv, centerPlate.firstChild);
+        habilidadesBox.insertBefore(binDiv, habilidadesBox.firstChild);
+    }
+
+    // Automatic Stepping Projects Carousel
+    const viewport = document.querySelector('.carousel-viewport');
+    const track = document.getElementById('proyectos-track');
+    
+    if (viewport && track) {
+        // Clone the cards individually so we can loop seamlessly 
+        const originalCards = Array.from(track.children);
+        const totalOriginal = originalCards.length;
+        
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            track.appendChild(clone);
+        });
+
+        let currentIndex = 0;
+        
+        setInterval(() => {
+            if (!track.children[0]) return;
+            // Get current responsive width of one card + gap
+            const cardWidth = track.children[0].offsetWidth;
+            const gap = 20; 
+            const slideWidth = cardWidth + gap;
+
+            currentIndex++;
+            
+            // Slide to next item
+            track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+            // Snap back when the exact clones are fully in view
+            if (currentIndex === totalOriginal) {
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    currentIndex = 0;
+                    track.style.transform = `translateX(0px)`;
+                }, 600); // 600ms matches the CSS transition time
+            }
+        }, 4000); // Wait 4 seconds on each slide
     }
 });
