@@ -24,22 +24,23 @@
         <!-- Top Section -->
         <header class="top-section">
             <div class="logo-container floating" style="animation-delay: 0s;">
-                <img src="Logo_ME.png" alt="ME Logo" class="logo-img" style="max-height: 100px; filter: drop-shadow(0 10px 20px rgba(14, 165, 233, 0.5));">
+                <img src="Logo_ME.png" alt="ME Logo" class="logo-img" style="max-height: 80px; filter: drop-shadow(0 10px 20px rgba(14, 165, 233, 0.5));">
             </div>
+            
             <nav class="nav-bar glass-plate floating" style="animation-delay: -1s;">
                 <ul>
-                    <li><a href="#inicio" data-i18n="nav_inicio">INICIO</a></li>
+                    <li><a href="https://www.linkedin.com/in/eddy-montaño-lópez/" target="_blank" rel="noopener noreferrer" data-i18n="nav_linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#sobre-mi" data-i18n="nav_sobre_mi">SOBRE MÍ</a></li>
+                    <li><a href="mailto:montanoeddy1120@gmail.com" data-i18n="nav_email"><i class="fa-solid fa-envelope"></i> Email</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#habilidades" data-i18n="nav_habilidades">HABILIDADES</a></li>
+                    <li><a href="https://wa.me/59162686586" target="_blank" rel="noopener noreferrer" data-i18n="nav_whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
                     <li class="separator">|</li>
-                    <li><a href="#proyectos" data-i18n="nav_proyectos">PROYECTOS</a></li>
-                    <li class="separator">|</li>
-                    <li><a href="#certificaciones" data-i18n="nav_certificaciones">CERTIFICACIONES</a></li>
-                    <li class="separator">|</li>
-                    <li><a href="#contacto" data-i18n="nav_contacto">CONTACTO</a></li>
-                    <li class="separator">|</li>
+                    <li><a href="CV.pdf" download data-i18n="nav_download_cv"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-bar glass-plate floating" style="animation-delay: -1.5s;">
+                <ul>
                     <li>
                         <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
                             <i class="fa-solid fa-moon"></i>
@@ -57,7 +58,7 @@
 
         <div class="main-layout">
             <!-- COLUMNA IZQUIERDA -->
-            <div class="left-column">
+                    <div class="left-column">
                 <section id="sobre-mi" class="side-plate glass-plate floating" style="animation-delay: -2s;">
                     <h2 data-i18n="title_sobre_mi">SOBRE MÍ</h2>
                     <div class="about-content">
@@ -78,28 +79,28 @@
                     <h2 data-i18n="title_habilidades">HABILIDADES</h2>
                     <div class="hex-grid">
                         <div class="hex-tile-wrapper floating" style="animation-duration: 4.5s; animation-delay: -2s;">
-                            <div class="hex-tile"><i class="fa-solid fa-rocket"></i><span>Postman</span></div>
+                            <div class="hex-tile"><i class="fa-solid fa-rocket"></i><span data-i18n="skill_postman">Postman</span></div>
                         </div>
                         <div class="hex-tile-wrapper floating" style="animation-duration: 4s; animation-delay: 0s;">
-                            <div class="hex-tile"><i class="fa-solid fa-vial-circle-check"></i><span>Selenium</span></div>
+                            <div class="hex-tile"><i class="fa-solid fa-vial-circle-check"></i><span data-i18n="skill_selenium">Selenium</span></div>
                         </div>
                         <div class="hex-tile-wrapper floating" style="animation-duration: 4.5s; animation-delay: -2s;">
-                            <div class="hex-tile"><i class="fa-brands fa-java"></i><span>Testing Java</span></div>
+                            <div class="hex-tile"><i class="fa-brands fa-java"></i><span data-i18n="skill_java">Testing Java</span></div>
                         </div>
                         <div class="hex-tile-wrapper floating" style="animation-duration: 5s; animation-delay: -1.5s;">
-                            <div class="hex-tile"><i class="fa-brands fa-python"></i><span>Pytest</span></div>
+                            <div class="hex-tile"><i class="fa-brands fa-python"></i><span data-i18n="skill_pytest">Pytest</span></div>
                         </div>
                         <div class="hex-tile-wrapper floating" style="animation-duration: 5.2s; animation-delay: -0.2s;">
-                            <div class="hex-tile"><i class="fa-solid fa-code-branch"></i><span>CI/CD</span></div>
+                            <div class="hex-tile"><i class="fa-solid fa-code-branch"></i><span data-i18n="skill_cicd">CI/CD</span></div>
                         </div>
                         <div class="hex-tile-wrapper floating" style="animation-duration: 4s; animation-delay: -3s;">
-                            <div class="hex-tile"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                            <div class="hex-tile"><i class="fa-solid fa-database"></i><span data-i18n="skill_sql">SQL</span></div>
                         </div>
                         <div class="hex-tile-wrapper floating" style="animation-duration: 4.8s; animation-delay: -2.5s;">
-                            <div class="hex-tile"><i class="fa-solid fa-rotate"></i><span>Agile</span></div>
+                            <div class="hex-tile"><i class="fa-solid fa-rotate"></i><span data-i18n="skill_agile">Agile</span></div>
                         </div>
                         <div class="hex-tile-wrapper floating" style="animation-duration: 5s; animation-delay: -1s;">
-                            <div class="hex-tile"><i class="fa-brands fa-jira"></i><span>JIRA</span></div>
+                            <div class="hex-tile"><i class="fa-brands fa-jira"></i><span data-i18n="skill_jira">JIRA</span></div>
                         </div> 
                     </div>
                 </section>
@@ -196,9 +197,11 @@
                                     <li data-i18n="exp1_li4">Integración en flujos de trabajo ágiles y participación en dailies y retrospectives</li>
                                 </ul>
                                 <div class="tech-pill-container">
-                                    <span class="tech-pill"><i class="fa-solid fa-code"></i> Next.js</span>
-                                    <span class="tech-pill"><i class="fa-solid fa-database"></i> Supabase</span>
-                                    <span class="tech-pill"><i class="fa-solid fa-book"></i> BookStack</span>
+                                    <span class="tech-pill"><i class="fa-solid fa-vial"></i> <span data-i18n="pill_funcional">Funcional Testing</span></span>
+                                    <span class="tech-pill"><i class="fa-solid fa-vial-circle-check"></i> <span data-i18n="pill_selenium">Selenium</span></span>
+                                    <span class="tech-pill"><i class="fa-brands fa-java"></i> <span data-i18n="pill_java">Java</span></span>
+                                    <span class="tech-pill"><i class="fa-brands fa-js"></i> <span data-i18n="pill_typescript">Typescript</span></span>
+                                    <span class="tech-pill"><i class="fa-solid fa-file-excel"></i> <span data-i18n="pill_excel">Excel</span></span>
                                 </div>
                             </div>
                         </div>
@@ -216,9 +219,12 @@
                                     <li data-i18n="exp2_li5">Participar activamente en equipos ágiles bajo metodología Scrum.</li>
                                 </ul>
                                 <div class="tech-pill-container">
-                                    <span class="tech-pill"><i class="fa-solid fa-vial-circle-check"></i> Selenium</span>
-                                    <span class="tech-pill"><i class="fa-brands fa-linux"></i> Ubuntu</span>
-                                    <span class="tech-pill"><i class="fa-brands fa-jira"></i> Jira</span>
+                                    <span class="tech-pill"><i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="pill_exploratory">Exploratory Testing</span></span>
+                                    <span class="tech-pill"><i class="fa-solid fa-masks-theater"></i> <span data-i18n="pill_playwright">Playwright</span></span>
+                                    <span class="tech-pill"><i class="fa-brands fa-python"></i> <span data-i18n="pill_pytest">Pytest</span></span>
+                                    <span class="tech-pill"><i class="fa-solid fa-rocket"></i> <span data-i18n="pill_postman">Postman</span></span>
+                                    <span class="tech-pill"><i class="fa-brands fa-github"></i> <span data-i18n="pill_github_actions">GitHub Actions</span></span>
+                                    <span class="tech-pill"><i class="fa-solid fa-users-gear"></i> <span data-i18n="pill_scrum">Scrum</span></span>
                                 </div>
                             </div>
                         </div>
@@ -235,9 +241,10 @@
                                     <li data-i18n="exp3_li4">Colaborar junto al equipo de desarrollo en la definición de procesos de pruebas y validación de nuevas funcionalidades.</li>
                                 </ul>
                                 <div class="tech-pill-container">
-                                    <span class="tech-pill"><i class="fa-solid fa-code"></i> Next.js</span>
-                                    <span class="tech-pill"><i class="fa-solid fa-database"></i> Supabase</span>
-                                    <span class="tech-pill"><i class="fa-solid fa-book"></i> BookStack</span>
+                                    <span class="tech-pill"><i class="fa-solid fa-hand-pointer"></i> <span data-i18n="pill_manual">Manual Testing</span></span>
+                                    <span class="tech-pill"><i class="fa-solid fa-list-check"></i> <span data-i18n="pill_test_planning">Test Planing</span></span>
+                                    <span class="tech-pill"><i class="fa-solid fa-pen-ruler"></i> <span data-i18n="pill_test_design">Test Design</span></span>
+                                    <span class="tech-pill"><i class="fa-solid fa-bug"></i> <span data-i18n="pill_bug_tracking">Bug Tracking</span></span>
                                 </div>
                             </div>
                         </div>
