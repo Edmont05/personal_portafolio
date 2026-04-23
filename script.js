@@ -353,4 +353,67 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 4000); // Wait 4 seconds on each slide
     }
+
+    // Generate ATS-friendly PDF dynamically
+    const downloadBtn = document.getElementById('download-cv-btn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const t = translations[currentLang];
+            
+            const skillsStr = [
+                t.skill_postman, t.skill_selenium, t.skill_java, t.skill_pytest, 
+                t.skill_cicd, t.skill_sql, t.skill_agile, t.skill_jira
+            ].join(', ');
+
+            const tech1 = [t.pill_funcional, t.pill_selenium, t.pill_java, t.pill_typescript, t.pill_excel].join(', ');
+            const tech2 = [t.pill_exploratory, t.pill_playwright, t.pill_pytest, t.pill_postman, t.pill_github_actions, t.pill_scrum].join(', ');
+            const tech3 = [t.pill_manual, t.pill_test_planning, t.pill_test_design, t.pill_bug_tracking].join(', ');
+
+            const docDefinition = {
+                content: [
+                    { text: 'EDDY MONTAÑO LÓPEZ', style: 'header' },
+                    { text: '+591 62686586 | montanoeddy1120@gmail.com | linkedin.com/in/eddy-montaño-lópez/', style: 'contact' },
+                    
+                    { text: currentLang === 'es' ? 'RESUMEN PROFESIONAL' : 'PROFESSIONAL SUMMARY', style: 'sectionHeader' },
+                    { text: t.about_text, style: 'body' },
+                    
+                    { text: currentLang === 'es' ? 'HABILIDADES CLAVE' : 'CORE SKILLS', style: 'sectionHeader' },
+                    { text: skillsStr, style: 'body' },
+                    
+                    { text: currentLang === 'es' ? 'EXPERIENCIA LABORAL' : 'WORK EXPERIENCE', style: 'sectionHeader' },
+                    
+                    { text: t.exp1_title + (currentLang === 'es' ? ' | Septiembre 2025 - Presente' : ' | September 2025 - Present'), style: 'jobHeader' },
+                    { ul: [t.exp1_li1, t.exp1_li2, t.exp1_li3, t.exp1_li4, (currentLang === 'es' ? 'Tecnologías: ' : 'Technologies: ') + tech1], style: 'list' },
+                    
+                    { text: t.exp2_title + (currentLang === 'es' ? ' | Enero 2024 - Junio 2025' : ' | January 2024 - June 2025'), style: 'jobHeader' },
+                    { ul: [t.exp2_li1, t.exp2_li2, t.exp2_li3, t.exp2_li4, t.exp2_li5, (currentLang === 'es' ? 'Tecnologías: ' : 'Technologies: ') + tech2], style: 'list' },
+                    
+                    { text: t.exp3_title + (currentLang === 'es' ? ' | Septiembre 2023 - Diciembre 2023' : ' | September 2023 - December 2023'), style: 'jobHeader' },
+                    { ul: [t.exp3_li1, t.exp3_li2, t.exp3_li3, t.exp3_li4, (currentLang === 'es' ? 'Tecnologías: ' : 'Technologies: ') + tech3], style: 'list' },
+
+                    { text: currentLang === 'es' ? 'CERTIFICACIONES' : 'CERTIFICATIONS', style: 'sectionHeader' },
+                    { ul: [
+                        'Postman API Fundamentals Student Expert',
+                        'SmallTalk English Speaking Level Test',
+                        currentLang === 'es' ? 'Test Unitarios en SPRING BOOT' : 'Unit Testing in SPRING BOOT',
+                        currentLang === 'es' ? 'Test Unitarios en ANGULAR' : 'Unit Testing in ANGULAR',
+                        currentLang === 'es' ? 'Test Unitarios en FLUTTER' : 'Unit Testing in FLUTTER',
+                        currentLang === 'es' ? 'Microsoft Excel Básico + Intermedio' : 'Microsoft Excel Basic + Intermediate'
+                    ], style: 'list' }
+                ],
+                styles: {
+                    header: { fontSize: 18, bold: true, alignment: 'center', margin: [0, 0, 0, 5] },
+                    contact: { fontSize: 10, alignment: 'center', margin: [0, 0, 0, 15] },
+                    sectionHeader: { fontSize: 12, bold: true, margin: [0, 15, 0, 5], decoration: 'underline' },
+                    body: { fontSize: 10, margin: [0, 0, 0, 10], alignment: 'justify' },
+                    jobHeader: { fontSize: 11, bold: true, margin: [0, 10, 0, 5] },
+                    list: { fontSize: 10, margin: [0, 0, 0, 10] }
+                },
+                defaultStyle: { font: 'Roboto' }
+            };
+
+            pdfMake.createPdf(docDefinition).download(`CV_Eddy_Montano_${currentLang.toUpperCase()}.pdf`);
+        });
+    }
 });
