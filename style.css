@@ -773,14 +773,39 @@ h2 {
     text-shadow: var(--t-shadow-etched);
 }
 
-.timeline-date {
-    display: block;
-    font-family: 'Outfit', sans-serif;
-    color: var(--accent-blue);
+.timeline-company {
+    font-size: 1.05rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.timeline-company i {
+    color: var(--accent-blue);
+}
+
+.timeline-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 15px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
     letter-spacing: 1px;
+}
+
+.timeline-date {
+    color: var(--accent-blue);
+}
+
+.timeline-location {
+    color: var(--accent-green);
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .timeline-list {
